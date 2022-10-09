@@ -1,2 +1,2 @@
 # BlogApp_project
-This project has created with Django
+This project has created with Django.
