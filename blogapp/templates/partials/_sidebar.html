@@ -1,0 +1,15 @@
+{% load static %}
+
+
+<div class="list-group">
+    {% for catagory in catagories %}
+        {% if catagory.slug == selected_catagory %}
+            <a class="list-group-item list-group-action active" href="{% url 'catagory' catagory.slug %}">{{catagory.name|title}}</a>
+
+        {% else %}
+
+            <a class="list-group-item list-group-action " href="{% url 'catagory' catagory.slug %}">{{catagory.name|title}}</a>
+
+        {% endif %}
+    {% endfor %}
+</div>

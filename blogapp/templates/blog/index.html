@@ -1,14 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Index{% endblock title %}
 
 {% block content %}
 
     <h1>Hello World</h1>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-3">
+                {% include 'partials/_sidebar.html' %}
+            </div>
 
-    <ul>
-        <li><a href="{% url 'blogs' %}">blogs</a></li>
-        <li><a href="{% url 'blog_det' 212121212 %}">blog_det</a></li>
-    </ul>
+            <div class="col-9">
+                {% for blog in blogs %}
+                    {% include 'partials/_content.html' %}
+                {% endfor %}
+            </div>
+
+           
+        </div>
+    </div>
 
 {% endblock content %}

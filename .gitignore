@@ -1,3 +1,9 @@
+uploads
+img
+vendor
+
+
+
 # Django #
 *.log
 *.pot
